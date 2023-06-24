@@ -34,7 +34,7 @@ const createKeyboard = () => {
 
 const createHangmanImg = () => {
   const image = document.createElement("img");
-  image.src = "public/images/hg-0.png";
+  image.src = "images/hg-0.png";
   image.alt = "hangman image";
   image.classList.add("hangman-img");
   image.id = "hangman-img";
@@ -52,7 +52,7 @@ const checkLetter = (letter) => {
     triesCounter.innerText = triesLeft;
 
     const hangmanImg = document.getElementById('hangman-img');
-    hangmanImg.src = `/public/images/hg-${10 - triesLeft}.png`;
+    hangmanImg.src = `images/hg-${10 - triesLeft}.png`;
 
     if (triesLeft === 0) {
       stopGame('lose');
@@ -85,7 +85,7 @@ const stopGame = (status) => {
 
   if (status === 'win') {
     // выигрыш
-    document.getElementById('hangman-img').src = '/public/images/hg-win.png';
+    document.getElementById('hangman-img').src = 'images/hg-win.png';
     document.getElementById('game').innerHTML += '<h2 class = "result-header win">You are breathtaking! </h2>';
   } else if (status === 'lose') {
     // проигрыш
